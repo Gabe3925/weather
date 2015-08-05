@@ -57,10 +57,13 @@ $yourcity = $_POST['city'];
         // close curl 
         curl_close($ch); 
 
+        //json decoded into an array
         $decoded = json_decode($output, true);
 
+        //encoded json
         // echo $output; 
 
+        //decoded json array
         echo $decoded;
 
 // access first element of $ar array
@@ -68,12 +71,21 @@ $yourcity = $_POST['city'];
 
 
 
+echo "iterate...";
 
-
-print_r($decoded);
+// print_r($decoded);
 foreach ($decoded as $key => $value) { 
     echo "<p>$key | $value</p>";
 }
+
+echo "deeper iterate..."
+foreach ($phpArray as $key => $value) { 
+    echo "<h2>$key</h2>";
+    foreach ($value as $k => $v) { 
+        echo "$k | $v <br />"; 
+    }
+}
+?>
 
 
 
