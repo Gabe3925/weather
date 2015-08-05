@@ -66,23 +66,14 @@ $yourcity = $_POST['city'];
         //decoded json array
         echo $decoded;
 
-// access first element of $ar array
-// echo $output[0];
-
-
-
-// echo "iterate...";
-
-// print_r($decoded);
-foreach ($decoded as $key => $value) { 
-    echo "<p>$key | $value</p>";
-}
-
 // echo "deeper iterate...";
 foreach ($decoded as $key => $value) { 
     echo "<h2>$key</h2>";
     foreach ($value as $k => $v) { 
-        echo "$k | $v <br />"; 
+        echo "$k | $v <br />";
+           foreach ($v as $v2 => $v3) { 
+           echo "$v2 | $v3 <br />"; 
+       } 
     }
 }
 
