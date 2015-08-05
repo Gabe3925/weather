@@ -2,7 +2,7 @@
 <body>
 
 
-<form action="form.php" method="post">
+<form action="index.php" method="post">
 
 <p>Get a weather report for your city:
 
