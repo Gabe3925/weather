@@ -79,7 +79,7 @@ foreach ($decoded as $key => $value) {
 }
 
 echo "deeper iterate..."
-foreach ($phpArray as $key => $value) { 
+foreach ($decoded as $key => $value) { 
     echo "<h2>$key</h2>";
     foreach ($value as $k => $v) { 
         echo "$k | $v <br />"; 
