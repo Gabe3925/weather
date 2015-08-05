@@ -71,14 +71,14 @@ $yourcity = $_POST['city'];
 
 
 
-echo "iterate...";
+// echo "iterate...";
 
 // print_r($decoded);
 foreach ($decoded as $key => $value) { 
     echo "<p>$key | $value</p>";
 }
 
-echo "deeper iterate..."
+// echo "deeper iterate...";
 foreach ($decoded as $key => $value) { 
     echo "<h2>$key</h2>";
     foreach ($value as $k => $v) { 
