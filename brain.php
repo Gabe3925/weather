@@ -61,10 +61,10 @@ $yourcity = $_POST['city'];
         $decoded = json_decode($output, true);
 
         //encoded json
-        // echo $output; 
+        echo $output; 
 
         //decoded json array
-        echo $decoded;
+        //echo $decoded;
 
 // echo "deeper iterate...";
 foreach ($decoded as $key => $value) { 
@@ -73,6 +73,9 @@ foreach ($decoded as $key => $value) {
         echo "$k | $v <br />";
            foreach ($v as $v2 => $v3) { 
            echo "$v2 | $v3 <br />"; 
+              foreach ($v3 as $v4 => $v5) { 
+              echo "$v4 | $v5 <br />"; 
+          } 
        } 
     }
 }
