@@ -75,6 +75,12 @@ foreach ($decoded as $key => $value) {
            echo "$v2 | $v3 <br />"; 
               foreach ($v3 as $v4 => $v5) { 
               echo "$v4 | $v5 <br />"; 
+                 foreach ($v5 as $v6 => $v7) { 
+                 echo "$v6 | $v7 <br />"; 
+                    foreach ($v7 as $v8 => $v9) { 
+                    echo "$v8 | $v9 <br />"; 
+                } 
+             } 
           } 
        } 
     }
