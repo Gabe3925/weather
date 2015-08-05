@@ -23,6 +23,7 @@ Your weather report: <br />
 <?php
 include 'brain.php';
 ?>
+
  
 
 </body>

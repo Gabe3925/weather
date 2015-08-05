@@ -3,7 +3,7 @@
 /* Check all form inputs using check_input function */
 // $yourcity = check_input($_POST['yourcity'], "Choose a city");
 $yourcity = $_POST['city'];
-printf($yourcity);
+
 
 
 
@@ -59,11 +59,22 @@ printf($yourcity);
 
         $decoded = json_decode($output, true);
 
-        echo $output;   
-        // print($decoded);
+        // echo $output; 
+
+        echo $decoded;
 
 // access first element of $ar array
-echo $output[0];
+// echo $output[0];
+
+
+
+
+
+print_r($decoded);
+foreach ($decoded as $key => $value) { 
+    echo "<p>$key | $value</p>";
+}
+
 
 
 // //Iterate through the decoded json
