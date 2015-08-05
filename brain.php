@@ -85,7 +85,7 @@ foreach ($phpArray as $key => $value) {
         echo "$k | $v <br />"; 
     }
 }
-?>
+
 
 
 
