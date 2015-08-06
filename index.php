@@ -29,7 +29,7 @@
 
           <form action="index.php" method="post" class="form-horizontal">
           <div class="btn-group">
-            <select name="city">
+            <select name="zipcode">
    	          <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Choose a city: <span class="caret"></span>
               </button>
