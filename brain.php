@@ -1,6 +1,6 @@
 <?php
 
-//recieve a zip via post
+//recieve a zipcode via http POST
 $zipcode = $_POST['zipcode'];
 
 function return_weather_for_zip($zip)
@@ -25,6 +25,7 @@ function return_weather_for_zip($zip)
           return ($decoded_json);
 }
 
+//run the single-zip function
 $output = return_weather_for_zip($zipcode);
 
 //weather result
@@ -37,7 +38,7 @@ echo $output;
 echo "<ul class='list-group'>";
 
 foreach ($output as $key => $value) { 
-    echo "<h2>$yourcity</h2>";
+    echo "<h2>$zipcode</h2>";
     foreach ($value as $k => $v) { 
         echo "<li class='list-group-item'>$k | $v </li>";
            foreach ($v as $v2 => $v3) { 
@@ -63,14 +64,39 @@ foreach ($output as $key => $value) {
 echo "</ul>";
 
 
+//function takes array of zips
+function return_weather_for_many_zips($zip_array)
+{
+    $arr = array();
+    foreach ($zip_array as $zip) { 
 
+        // create curl handle 
+        $ch = curl_init(); 
 
-// //Iterate through the decoded json
-// foreach($decoded as $key => $value)
-// {
-//    echo $value['period'] . '<br>';
-//    echo $value['icon'] . '<br>';
-// }
+        // set url, with $zip 
+        curl_setopt($ch, CURLOPT_URL, "https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20weather.forecast%20where%20woeid%20in%20(select%20woeid%20from%20geo.places(1)%20where%20text%3D%22" . $zip . "%22)&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys"); 
+
+        //return the transfer as a string 
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
+
+        // execute the curl and put the result into var $json
+        $json = curl_exec($ch); 
+
+        // close curl 
+        curl_close($ch); 
+
+        //json decoded into an array
+        $decoded_json = json_decode($json, true);
+
+        //add output for this zip to holder array
+        array_push($arr, $decoded_json);
+   }
+          
+          //return the array of results
+          return ($arr);
+}
+
+print_r($arr);
         
 
 
