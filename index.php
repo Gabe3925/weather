@@ -27,15 +27,38 @@
           <p>Get a weather report for your city:
         </div>
 
+
+<!-- Single button -->
+<div class="btn-group">
+  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Choose a city <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu">
+    <li><a href="#">Action</a></li>
+    <li><a href="#">Another action</a></li>
+    <li><a href="#">Something else here</a></li>
+    <li role="separator" class="divider"></li>
+    <li><a href="#">Separated link</a></li>
+  </ul>
+</div>
+
+
+<div class="btn-group">
    <form action="index.php" method="post">
    <select name="city">
-   <option value=""> -- Please select -- </option>
-   <option value="Baltimore">Baltimore, MD</option>
-   <option value="Seattle">Seattle, WA</option>
-   <option value="LosAngeles">Los Angeles, CA</option>
-   <option value="Nome">Nome, AK</option>
-   <option value="Paris">Paris, France</option>
+   	<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Choose a city: <span class="caret"></span>
+    </button>
+     <ul class="dropdown-menu">
+     <li><option value=""> -- Please select -- </option></li>
+     <li><option value="Baltimore">Baltimore, MD</option></li>
+     <li><option value="Seattle">Seattle, WA</option></li>
+     <li><option value="LosAngeles">Los Angeles, CA</option></li>
+     <li><option value="Nome">Nome, AK</option></li>
+     <li><option value="Paris">Paris, France</option></li>
+     </ul>
    </select>
+</div>
 
    <p><input type="submit" value="Check Weather!" class="btn btn-primary btn-lg" role="button"></p>
 
