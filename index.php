@@ -27,8 +27,9 @@
           <p>Get a weather report for your city:
         </div>
 
-          <form action="index.php" method="post" class="form-horizontal">
+          
           <div class="btn-group">
+           <form action="index.php" method="post" class="form-horizontal">
             <select name="city">
    	          <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Choose a city: <span class="caret"></span>
@@ -42,11 +43,13 @@
                <li><option value="Paris">Paris, France</option></li>
                </ul>
              </select>
+            </form>
           </div>
+          
           <div class="container">
           <p><input type="submit" value="Check Weather!" class="btn btn-primary btn-lg" role="button"></p>
           </div>
-          </form>
+          
 
       Your weather report:<br />
       
