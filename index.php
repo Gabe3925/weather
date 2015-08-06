@@ -27,31 +27,32 @@
           <p>Get a weather report for your city:
         </div>
 
-<form action="index.php" method="post">
-<div class="btn-group">
-  <select name="city">
-   	<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Choose a city: <span class="caret"></span>
-    </button>
-     <ul class="dropdown-menu">
-     <li><option value=""> -- Please select -- </option></li>
-     <li><option value="Baltimore">Baltimore, MD</option></li>
-     <li><option value="Seattle">Seattle, WA</option></li>
-     <li><option value="LosAngeles">Los Angeles, CA</option></li>
-     <li><option value="Nome">Nome, AK</option></li>
-     <li><option value="Paris">Paris, France</option></li>
-     </ul>
-   </select>
-</div>
+          <form action="index.php" method="post" class="form-horizontal">
+          <div class="btn-group">
+            <select name="city">
+   	          <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Choose a city: <span class="caret"></span>
+              </button>
+               <ul class="dropdown-menu">
+               <li><option value=""> -- Please select -- </option></li>
+               <li><option value="Baltimore">Baltimore, MD</option></li>
+               <li><option value="Seattle">Seattle, WA</option></li>
+               <li><option value="LosAngeles">Los Angeles, CA</option></li>
+               <li><option value="Nome">Nome, AK</option></li>
+               <li><option value="Paris">Paris, France</option></li>
+               </ul>
+             </select>
+          </div>
+          <div class="container">
+          <p><input type="submit" value="Check Weather!" class="btn btn-primary btn-lg" role="button"></p>
+          </div>
+          </form>
 
-<p><input type="submit" value="Check Weather!" class="btn btn-primary btn-lg" role="button"></p>
-
-</form>
-
-   Your weather report: <br />
-   <?php
-   include 'brain.php';
-   ?>
+      Your weather report:<br />
+      
+      <?php
+      include 'brain.php';
+      ?>
 
    	  </div>
     </div>
