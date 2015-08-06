@@ -35,10 +35,10 @@
               </button>
                <ul class="dropdown-menu">
                <li><option value=""> -- Please select -- </option></li>
-               <li><option value="Baltimore">Baltimore, MD</option></li>
-               <li><option value="Seattle">Seattle, WA</option></li>
-               <li><option value="LosAngeles">Los Angeles, CA</option></li>
-               <li><option value="Nome">Nome, AK</option></li>
+               <li><option value="21218">Baltimore, MD</option></li>
+               <li><option value="98101">Seattle, WA</option></li>
+               <li><option value="90001">Los Angeles, CA</option></li>
+               <li><option value="33101">Miami, FL</option></li>
                <li><option value="Paris">Paris, France</option></li>
                </ul>
              </select>
