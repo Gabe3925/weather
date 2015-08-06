@@ -37,7 +37,7 @@
    <option value="Paris">Paris, France</option>
    </select>
 
-   <p><a class="btn btn-primary btn-lg" role="button" type="submit" value="Check Weather!"></a></p>
+   <p><input type="submit" value="Check Weather!" class="btn btn-primary btn-lg" role="button"></p>
 
    </form>
 
