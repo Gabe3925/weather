@@ -74,15 +74,18 @@ foreach ($decoded as $key => $value) {
     foreach ($value as $k => $v) { 
         echo "<li class='list-group-item'>$k | $v </li>";
            foreach ($v as $v2 => $v3) { 
-           echo "$v2 | $v3 <br />"; 
+           echo "<li class='list-group-item'>$v2 | $v3 </li>"; 
               foreach ($v3 as $v4 => $v5) { 
-              echo "$v4 | $v5 <br />"; 
+              echo "<li class='list-group-item'>$v4 | $v5 </li>"; 
                  foreach ($v5 as $v6 => $v7) { 
-                 echo "$v6 | $v7 <br />"; 
+                 echo "<li class='list-group-item'>$v6 | $v7 </li>"; 
                     foreach ($v7 as $v8 => $v9) { 
-                    echo "$v8 | $v9 <br />"; 
+                    echo "<li class='list-group-item'>$v8 | $v9 </li>"; 
                        foreach ($v9 as $v10 => $v11) { 
-                       echo "$v10 | $v11 <br />"; 
+                       echo "<li class='list-group-item'>$v10 | $v11 </li>"; 
+                           foreach ($v11 as $v12 => $v13) { 
+                          echo "<li class='list-group-item'>$v12 | $v13 </li>"; 
+                      } 
                    } 
                 } 
              } 
