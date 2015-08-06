@@ -1,32 +1,60 @@
-<html>
-<body>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Weather Checker</title>
 
+    <!-- Bootstrap -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
 
-<form action="index.php" method="post">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
 
-<p>Get a weather report for your city:
+  	<div class="container">
+  	  <div class="panel panel-default">
+        <div class="panel-body">
 
-<select name="city">
-<option value=""> -- Please select -- </option>
-<option value="Baltimore">Baltimore, MD</option>
-<option value="Seattle">Seattle, WA</option>
-<option value="LosAngeles">Los Angeles, CA</option>
-<option value="Nome">Nome, AK</option>
-<option value="Paris">Paris, France</option>
-</select>
+    	<div class="jumbotron">
+          <p>Get a weather report for your city:
+        </div>
 
-<p><input type="submit" value="Check Weather!"></p>
+   <form action="index.php" method="post">
+   <select name="city">
+   <option value=""> -- Please select -- </option>
+   <option value="Baltimore">Baltimore, MD</option>
+   <option value="Seattle">Seattle, WA</option>
+   <option value="LosAngeles">Los Angeles, CA</option>
+   <option value="Nome">Nome, AK</option>
+   <option value="Paris">Paris, France</option>
+   </select>
 
-</form>
+   <p><a class="btn btn-primary btn-lg" role="button"><input type="submit" value="Check Weather!"></a></p>
 
-Your weather report: <br />
-<?php
-include 'brain.php';
-?>
+   </form>
 
- 
+   Your weather report: <br />
+   <?php
+   include 'brain.php';
+   ?>
 
-</body>
+   	  </div>
+    </div>
+  </div>
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+  </body>
 </html>
 
 

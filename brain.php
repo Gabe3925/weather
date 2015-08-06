@@ -61,16 +61,18 @@ $yourcity = $_POST['city'];
         $decoded = json_decode($output, true);
 
         //encoded json
-        echo $output; 
+        // echo $output; 
 
         //decoded json array
         //echo $decoded;
 
 // echo "deeper iterate...";
+echo "<ul class='list-group'>";
+
 foreach ($decoded as $key => $value) { 
-    echo "<h2>$key</h2>";
+    echo "<h2>$yourcity</h2>";
     foreach ($value as $k => $v) { 
-        echo "$k | $v <br />";
+        echo "<li class='list-group-item'>$k | $v </li>";
            foreach ($v as $v2 => $v3) { 
            echo "$v2 | $v3 <br />"; 
               foreach ($v3 as $v4 => $v5) { 
@@ -79,12 +81,16 @@ foreach ($decoded as $key => $value) {
                  echo "$v6 | $v7 <br />"; 
                     foreach ($v7 as $v8 => $v9) { 
                     echo "$v8 | $v9 <br />"; 
+                       foreach ($v9 as $v10 => $v11) { 
+                       echo "$v10 | $v11 <br />"; 
+                   } 
                 } 
              } 
           } 
        } 
     }
 }
+echo "</ul>";
 
 
 
