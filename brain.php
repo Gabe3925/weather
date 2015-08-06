@@ -61,10 +61,10 @@ $yourcity = $_POST['city'];
         $decoded = json_decode($output, true);
 
         //encoded json
-        // echo $output; 
+        echo $decoded; 
 
         //decoded json array
-        //echo $decoded;
+        echo $decoded[2]['id'];
 
 // echo "deeper iterate...";
 echo "<ul class='list-group'>";
