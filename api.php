@@ -106,6 +106,7 @@ function return_weather_for_many_zips($zip_array)
           return ($arr);
 }
 
-print_r($arr);
+//function could be called and passed a zip array
+//return_weather_for_many_zips($zip_array)
 
 ?>
