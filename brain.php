@@ -6,6 +6,13 @@ $zipcode = $_POST['zipcode'];
 //function takes single zip, returns weather
 function return_weather_for_zip($zip)
 {
+    //checks to see if zip is null
+    if (is_null($zip)){
+
+        $name = 'Check the weather...';
+        return $name;
+   } else {
+
         // create curl handle 
           $ch = curl_init(); 
 
@@ -24,6 +31,7 @@ function return_weather_for_zip($zip)
           //json decoded into an array
           $decoded_json = json_decode($json, true);
           return ($decoded_json);
+   }
 }
 
 //run the single-zip function with zipcode passed from POST
