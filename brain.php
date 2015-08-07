@@ -29,7 +29,7 @@ function return_weather_for_zip($zip)
 //run the single-zip function with zipcode passed from POST
 $output = return_weather_for_zip($zipcode);
 
-//as an example here, i can dig through the json and find the name of the city
+//as an example here, i can dig through the json and find the name of the city to display
 $name = $output['query']['results']['channel']['description']; 
 
 //iterate
@@ -51,6 +51,9 @@ foreach ($output as $key => $value) {
                        echo "<li class='list-group-item'>$v10 | $v11 </li>"; 
                            foreach ($v11 as $v12 => $v13) { 
                           echo "<li class='list-group-item'>$v12 | $v13 </li>"; 
+                             foreach ($v13 as $v14 => $v15) { 
+                             echo "<li class='list-group-item'>$v14 | $v15 </li>"; 
+                         } 
                       } 
                    } 
                 } 
