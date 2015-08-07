@@ -3,18 +3,19 @@
 //recieve a zipcode via http POST
 $zipcode = $_POST['zipcode'];
 
+//function takes single zip, returns weather
 function return_weather_for_zip($zip)
 {
         // create curl handle 
           $ch = curl_init(); 
 
-          // set url, with $yourcity concatenated into the url.
+          // set url, adding a single zip into the url.
           curl_setopt($ch, CURLOPT_URL, "https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20weather.forecast%20where%20woeid%20in%20(select%20woeid%20from%20geo.places(1)%20where%20text%3D%22" . $zip . "%22)&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys"); 
 
           //return the transfer as a string 
           curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); 
 
-          // execute the curl and put the result into var $output
+          // execute the curl and put the result into var $json
           $json = curl_exec($ch); 
 
           // close curl 
@@ -25,16 +26,13 @@ function return_weather_for_zip($zip)
           return ($decoded_json);
 }
 
-//run the single-zip function
+//run the single-zip function with zipcode passed from POST
 $output = return_weather_for_zip($zipcode);
 
-//weather result
-echo $output; 
+//test
+echo $output[1]; 
 
-//decoded json array
-// echo $decoded[2];
-
-// echo "deeper iterate...";
+//iterate
 echo "<ul class='list-group'>";
 
 foreach ($output as $key => $value) { 
@@ -62,6 +60,7 @@ foreach ($output as $key => $value) {
     }
 }
 echo "</ul>";
+
 
 
 //function takes array of zips
@@ -97,7 +96,5 @@ function return_weather_for_many_zips($zip_array)
 }
 
 print_r($arr);
-        
-
 
 ?>
