@@ -48,7 +48,7 @@
 
     <!-- weather report goes here    --> 
       <?php
-      include 'brain.php';
+      include 'api.php';
       ?>
 
    	  </div>
