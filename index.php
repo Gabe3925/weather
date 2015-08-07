@@ -43,9 +43,7 @@
                </ul>
              </select>
           </div>
-          <div class="container">
-          <p><input type="submit" value="Check Weather!" class="btn btn-primary btn-lg" role="button"></p>
-          </div>
+          <input type="submit" value="Check Weather!" class="btn btn-primary btn-lg" role="button">
           </form>
 
     <!-- weather report goes here    --> 
