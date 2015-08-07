@@ -29,14 +29,14 @@ function return_weather_for_zip($zip)
 //run the single-zip function with zipcode passed from POST
 $output = return_weather_for_zip($zipcode);
 
-//test
-echo $output[1]; 
+//as an example here, i can dig through the json and find the name of the city
+$name = $output['query']['results']['channel']['description']; 
 
 //iterate
 echo "<ul class='list-group'>";
 
 foreach ($output as $key => $value) { 
-    echo "<h2>$zipcode</h2>";
+    echo "<h2>$name</h2>";
     foreach ($value as $k => $v) { 
         echo "<li class='list-group-item'>$k | $v </li>";
            foreach ($v as $v2 => $v3) { 
