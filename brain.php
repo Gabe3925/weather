@@ -9,8 +9,8 @@ function return_weather_for_zip($zip)
     //checks to see if zip is null
     if (is_null($zip)){
 
-        $name = 'Check the weather...';
-        return $name;
+        return $nada;
+
    } else {
 
         // create curl handle 
